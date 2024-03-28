@@ -18,31 +18,7 @@ function addTask() {
     saveData();
 }
 
-// ul_li.addEventListener("click", function (e) {
-//     if (e.target.tagName === "LI") {
-//         e.target.classList.toggle("checked")
-//         saveData()
-//     }
-//     else if (e.target.tagName === "SPAN") {
-//         e.target.parentElement.remove()
-//         saveData()
-//     }
-// }, false)
-// ul_li.addEventListener("click", function (e) {
-//     if (e.target.tagName === "LI") {
-//         let clickedLi = e.target;
-//         clickedLi.classList.toggle("checked");
-//         if (clickedLi.classList.contains("checked")) {
-//             ul_li.appendChild(clickedLi); // Move checked item to the bottom
-//         } else {
-//             ul_li.insertBefore(clickedLi, ul_li.firstChild); // Move unchecked item to the top
-//         }
-//         saveData();
-//     } else if (e.target.tagName === "SPAN") {
-//         e.target.parentElement.remove();
-//         saveData();
-//     }
-// }, false);
+
 
 ul_li.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
@@ -50,10 +26,10 @@ ul_li.addEventListener("click", function (e) {
         clickedLi.classList.toggle("checked");
         if (clickedLi.classList.contains("checked")) {
             setTimeout(function () {
-                ul_li.appendChild(clickedLi); // Move checked item to the bottom
-            }, 300); // Wait for the animation to complete before moving
+                ul_li.appendChild(clickedLi); 
+            }, 300); 
         } else {
-            ul_li.insertBefore(clickedLi, ul_li.firstChild); // Move unchecked item to the top
+            ul_li.insertBefore(clickedLi, ul_li.firstChild); 
         }
         saveData();
     } else if (e.target.tagName === "SPAN") {
